@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tentolouris-nutrition.gr/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tentolouris-nutrition.gr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tentolouris-nutrition.gr/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tentolouris-nutrition.gr/"/>
+  </url>
+  <url>
+    <loc>https://tentolouris-nutrition.gr/en</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tentolouris-nutrition.gr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tentolouris-nutrition.gr/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tentolouris-nutrition.gr/"/>
+  </url>
+  <url>
+    <loc>https://tentolouris-nutrition.gr/ypologismos-bmi</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tentolouris-nutrition.gr/ypologismos-bmi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tentolouris-nutrition.gr/bmi-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tentolouris-nutrition.gr/ypologismos-bmi"/>
+  </url>
+  <url>
+    <loc>https://tentolouris-nutrition.gr/bmi-calculator</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tentolouris-nutrition.gr/ypologismos-bmi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tentolouris-nutrition.gr/bmi-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tentolouris-nutrition.gr/ypologismos-bmi"/>
+  </url>
+  <url>
+    <loc>https://tentolouris-nutrition.gr/politiki-aporritou</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tentolouris-nutrition.gr/politiki-aporritou"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tentolouris-nutrition.gr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tentolouris-nutrition.gr/politiki-aporritou"/>
+  </url>
+  <url>
+    <loc>https://tentolouris-nutrition.gr/privacy</loc>
+    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tentolouris-nutrition.gr/politiki-aporritou"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tentolouris-nutrition.gr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tentolouris-nutrition.gr/politiki-aporritou"/>
+  </url>
+</urlset>
