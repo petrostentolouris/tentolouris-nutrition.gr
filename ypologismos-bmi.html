@@ -1,13 +1,14 @@
 <!doctype html>
-<html lang="el" class="no-js">
+<html lang="el">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Υπολογισμός BMI &amp; Μεταβολικού Ρυθμού | Πέτρος-Ιωάννης Τεντολούρης</title>
-<meta name="description" content="Υπολόγισε δωρεάν τον Δείκτη Μάζας Σώματος (BMI), τον μεταβολικό ρυθμό ηρεμίας (Mifflin-St Jeor ή Katch-McArdle) και τις ημερήσιες ενεργειακές σου ανάγκες.">
+<meta name="description" content="Υπολόγισε δωρεάν τον Δείκτη Μάζας Σώματος (BMI), τον βασικό μεταβολικό ρυθμό (Mifflin-St Jeor ή Katch-McArdle) και τις ημερήσιες ενεργειακές σου ανάγκες.">
 <meta name="author" content="Πέτρος-Ιωάννης Τεντολούρης">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#082241">
+<meta name="theme-color" content="#082244">
+<meta name="format-detection" content="telephone=no">
 <link rel="canonical" href="https://tentolouris-nutrition.gr/ypologismos-bmi">
 <link rel="alternate" hreflang="el" href="https://tentolouris-nutrition.gr/ypologismos-bmi">
 <link rel="alternate" hreflang="en" href="https://tentolouris-nutrition.gr/bmi-calculator">
@@ -15,89 +16,284 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-512.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preload" href="/Inter-Regular.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="/site.css">
+<link rel="preload" href="/gfs-didot.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/manrope.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/style.css?v=2026-11-24">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_GB">
 <meta property="og:site_name" content="Tentolouris Nutrition">
 <meta property="og:title" content="Υπολογισμός BMI &amp; Μεταβολικού Ρυθμού | Πέτρος-Ιωάννης Τεντολούρης">
-<meta property="og:description" content="Υπολόγισε δωρεάν τον Δείκτη Μάζας Σώματος (BMI), τον μεταβολικό ρυθμό ηρεμίας (Mifflin-St Jeor ή Katch-McArdle) και τις ημερήσιες ενεργειακές σου ανάγκες.">
+<meta property="og:description" content="Υπολόγισε δωρεάν τον Δείκτη Μάζας Σώματος (BMI), τον βασικό μεταβολικό ρυθμό (Mifflin-St Jeor ή Katch-McArdle) και τις ημερήσιες ενεργειακές σου ανάγκες.">
 <meta property="og:url" content="https://tentolouris-nutrition.gr/ypologismos-bmi">
 <meta property="og:image" content="https://tentolouris-nutrition.gr/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://tentolouris-nutrition.gr/#website",
+   "url": "https://tentolouris-nutrition.gr/",
+   "name": "Tentolouris Nutrition",
+   "inLanguage": [
+    "el",
+    "en"
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://tentolouris-nutrition.gr/#petros",
+   "name": "Πέτρος-Ιωάννης Τεντολούρης",
+   "alternateName": "Petros-Ioannis Tentolouris",
+   "jobTitle": "Διαιτολόγος – Διατροφολόγος",
+   "image": "https://tentolouris-nutrition.gr/portrait.webp",
+   "email": "mailto:petrostentolouris@gmail.com",
+   "url": "https://tentolouris-nutrition.gr/",
+   "sameAs": [
+    "https://www.instagram.com/tentolouris_nutrition/"
+   ],
+   "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Πανεπιστήμιο Θεσσαλίας",
+    "alternateName": "University of Thessaly"
+   },
+   "memberOf": {
+    "@type": "Organization",
+    "name": "Σύλλογος Διαιτολόγων Διατροφολόγων Ελλάδος (HDNA)",
+    "alternateName": "Hellenic Dietitians-Nutritionists Association",
+    "url": "https://hdna.gr/"
+   },
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "degree",
+     "name": "MSc Κλινική Διαιτολογία – Διατροφή στην Υγεία και τη Νόσο, Τμήμα Ιατρικής Πανεπιστημίου Θεσσαλίας (Άριστα 8,98)"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "degree",
+     "name": "Πτυχίο Διατροφής & Διαιτολογίας, ΤΕΙ Θεσσαλίας – Καρδίτσα (νυν Πανεπιστήμιο Θεσσαλίας)"
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "license",
+     "name": "Άδεια Άσκησης Επαγγέλματος Διαιτολόγου – Διατροφολόγου"
+    }
+   ],
+   "knowsAbout": [
+    "Κλινική διαιτολογία",
+    "Απώλεια και διαχείριση βάρους",
+    "Διατροφικές συνήθειες",
+    "Διατροφική εκπαίδευση",
+    "Ψυχολογία της διατροφής",
+    "Αθλητική διατροφή",
+    "Δίαιτα FODMAP",
+    "Σύνδρομο ευερέθιστου εντέρου"
+   ]
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://tentolouris-nutrition.gr/#practice",
+   "name": "Tentolouris Nutrition – Διαιτολόγος Online",
+   "url": "https://tentolouris-nutrition.gr/",
+   "image": "https://tentolouris-nutrition.gr/og-image.jpg",
+   "logo": "https://tentolouris-nutrition.gr/favicon-512.png",
+   "email": "petrostentolouris@gmail.com",
+   "founder": {
+    "@id": "https://tentolouris-nutrition.gr/#petros"
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Τρίκαλα",
+    "addressRegion": "Θεσσαλία",
+    "addressCountry": "GR"
+   },
+   "areaServed": [
+    {
+     "@type": "Country",
+     "name": "Ελλάδα"
+    },
+    "Online"
+   ],
+   "availableLanguage": [
+    "Greek",
+    "English"
+   ],
+   "sameAs": [
+    "https://www.instagram.com/tentolouris_nutrition/"
+   ],
+   "makesOffer": [
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Δωρεάν γνωριμία 15 λεπτών"
+     },
+     "price": "0",
+     "priceCurrency": "EUR"
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Απώλεια και διαχείριση βάρους"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Βελτίωση διατροφικών συνηθειών"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Διατροφική εκπαίδευση"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Ψυχολογία της διατροφής"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Αθλητική διατροφή"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Κλινική διατροφή"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://tentolouris-nutrition.gr/ypologismos-bmi#webpage",
+   "url": "https://tentolouris-nutrition.gr/ypologismos-bmi",
+   "name": "Υπολογισμός BMI & Μεταβολικού Ρυθμού | Πέτρος-Ιωάννης Τεντολούρης",
+   "description": "Υπολόγισε δωρεάν τον Δείκτη Μάζας Σώματος (BMI), τον βασικό μεταβολικό ρυθμό (Mifflin-St Jeor ή Katch-McArdle) και τις ημερήσιες ενεργειακές σου ανάγκες.",
+   "inLanguage": "el",
+   "isPartOf": {
+    "@id": "https://tentolouris-nutrition.gr/#website"
+   },
+   "about": {
+    "@id": "https://tentolouris-nutrition.gr/#practice"
+   }
+  }
+ ]
+}
+</script>
+<script src="/app.js?v=2026-11-24" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
-<div style="width: 100%; min-height: 100vh; background: radial-gradient(520px 360px at 12% 10%, rgba(217,167,158,.18), transparent 70%), radial-gradient(560px 380px at 90% 30%, rgba(143,168,154,.18), transparent 70%), #FAFAF7; color: #082241; font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.6">
-<header style="position: sticky; top: 0; z-index: 10; background: rgba(250,250,247,0.95); border-bottom: 1px solid #E4E6EA">
-<div style="max-width: 1120px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="/" aria-label="Tentolouris Nutrition – αρχική" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #082241">
-<img class="pt-noimg" src="/logo.webp" alt="Λογότυπο Tentolouris Nutrition" width="44" height="44" style="width: 44px; height: 44px; border-radius: 50%; display: block">
-<span style="font-family: 'Noto Serif', Georgia, serif; font-size: 20px; font-weight: 600">Tentolouris Nutrition</span>
-</a>
-<nav aria-label="Κύριο μενού" style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px; font-weight: 500">
-<a class="pt-link" href="/" style="text-decoration: none">← Αρχική</a>
-<a class="pt-btn" href="https://calendly.com/petrostentolouris/15" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #082241; color: #FFFFFF; text-decoration: none; font-weight: 600">Κλείσε το ραντεβού σου</a>
+
+<div class="cl inner" style="width: 100%">
+
+<header class="hd" id="page-top">
+<div class="wrap hdin">
+<a class="wm" href="/" aria-label="Tentolouris Nutrition – αρχική"><img src="/logo-mark.webp" alt="" width="46" height="46"><span class="wt"><b>TENTOLOURIS <em>NUTRITION</em></b><span>Κλινική Διαιτολογία · Online</span></span></a>
+<nav class="nv" aria-label="Κύριο μενού">
+<a class="lk" href="/">Αρχική</a>
+<a class="lk" href="/methodos">Η μέθοδός μου</a>
+<a class="lk on" href="/ypologismos-bmi" aria-current="page">Μεταβολισμός &amp; BMI</a>
+<a class="lk" href="/viografiko">Βιογραφικό</a>
+<a class="lk" href="/kritikes">Κριτικές</a>
+<a class="lk" href="/syxnes-erotiseis">Ερωτήσεις</a>
+<a class="lk lang" href="/bmi-calculator" hreflang="en" lang="en" aria-label="English version">EN</a>
+<a class="cta sm" href="/epikoinonia">Γνωριμία 15′</a>
 </nav>
 </div>
 </header>
+
 <main id="main">
-<section class="rv" id="calculator" style="max-width: 1120px; margin: 0 auto; padding: 64px 24px 112px">
-<div style="background: #FFFFFF; border: 1px solid #E4E6EA; border-radius: 24px; box-shadow: 0 24px 48px -36px rgba(8,34,65,.35); padding: 48px clamp(20px, 4vw, 56px); display: flex; flex-direction: column; gap: 32px">
-<div style="display: flex; flex-direction: column; gap: 10px; max-width: 680px">
-<h1 style="margin: 0; font-family: 'Noto Serif', Georgia, serif; font-weight: 500; font-size: 38px; line-height: 1.2; color: #082241">Υπολογισμός BMI & Μεταβολικού Ρυθμού</h1>
-<p style="margin: 0; font-size: 17px; color: #3E4759">Συμπλήρωσε τα στοιχεία σου για μια πρώτη εκτίμηση του Δείκτη Μάζας Σώματος και των ενεργειακών σου αναγκών.</p>
+
+
+
+
+
+
+
+
+
+
+<section id="calculator" style="padding: 0 0 180px">
+<div class="wrap rv in">
+<div class="calcwrap">
+<span class="cb b1" aria-hidden="true"></span><span class="cb b2" aria-hidden="true"></span><span class="cb b3" aria-hidden="true"></span><span class="cgrid" aria-hidden="true"></span>
+<div class="calc">
+<div class="l">
+<p class="ov ol" style="margin: 0">Υπολογισμός BMI και Μεταβολικού ρυθμού</p>
+<h1 class="dd" style="margin: 0; font-size: clamp(30px,3vw,42px); line-height: 1.15">Πόση ενέργεια χρειάζεται <i style="color: #4B5A3C">το σώμα σου</i> σε ηρεμία;</h1>
+<p class="mu" style="margin: 0; font-size: 16px">Συμπλήρωσε τα στοιχεία σου για μια πρώτη εκτίμηση του βασικού μεταβολικού ρυθμού και του BMI (Δείκτη Μάζας Σώματος).</p>
+<p class="mu" style="margin: 0; font-size: 16px">Με το επίπεδο δραστηριότητας υπολογίζονται και οι συνολικές ημερήσιες ανάγκες σου.</p>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 40px">
-<form id="calc-form" novalidate style="flex: 1 1 380px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #082241">Φύλο<select id="calc-sex" name="sex" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 0 14px; border: 1.5px solid #D5DAE4; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #082241"><option value="f">Γυναίκα</option><option value="m">Άνδρας</option></select></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #082241">Ηλικία<input type="number" inputmode="numeric" min="18" max="100" placeholder="π.χ. 35" id="calc-age" name="age" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 0 14px; border: 1.5px solid #D5DAE4; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #082241"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #082241">Ύψος (cm)<input type="number" inputmode="decimal" min="120" max="230" placeholder="cm" id="calc-height" name="height" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 0 14px; border: 1.5px solid #D5DAE4; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #082241"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #082241">Βάρος (kg)<input type="number" inputmode="decimal" min="30" max="300" step="0.1" placeholder="kg" id="calc-weight" name="weight" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 0 14px; border: 1.5px solid #D5DAE4; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #082241"></label>
-<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #082241">Επίπεδο δραστηριότητας<select id="calc-act" name="act" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 0 14px; border: 1.5px solid #D5DAE4; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #082241"><option value="1.2">Καθιστική ζωή, ελάχιστη άσκηση</option><option value="1.375" selected>Ελαφριά: άσκηση 1–3 φορές την εβδομάδα</option><option value="1.55">Μέτρια: άσκηση 3–5 φορές την εβδομάδα</option><option value="1.725">Υψηλή: άσκηση 6–7 φορές την εβδομάδα</option><option value="1.9">Πολύ υψηλή: καθημερινή έντονη άσκηση ή χειρωνακτική εργασία</option></select></label>
-<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: #082241">Ποσοστό σωματικού λίπους (%) — προαιρετικό<input type="number" inputmode="decimal" min="3" max="60" step="0.1" placeholder="Αν το γνωρίζεις, π.χ. 25" id="calc-bf" name="bf" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 0 14px; border: 1.5px solid #D5DAE4; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #082241"></label>
+<form class="r" aria-label="Υπολογισμός μεταβολικού ρυθμού">
+<div class="fields">
+<div class="fld"><label for="cl-sex">Φύλο</label><select id="cl-sex"><option value="f">Γυναίκα</option><option value="m">Άνδρας</option></select></div>
+<div class="fld"><label for="cl-age">Ηλικία</label><input id="cl-age" type="number" inputmode="numeric" min="18" max="100" placeholder="π.χ. 34" value=""></div>
+<div class="fld"><label for="cl-h">Ύψος (cm)</label><input id="cl-h" type="number" inputmode="numeric" min="120" max="230" placeholder="π.χ. 170" value=""></div>
+<div class="fld"><label for="cl-w">Βάρος (kg)</label><input id="cl-w" type="number" inputmode="decimal" min="30" max="300" placeholder="π.χ. 72" value=""></div>
+<div class="fld"><label for="cl-bf">Λίπος (%)</label><input id="cl-bf" type="text" inputmode="decimal" placeholder="π.χ. 22 ή ?" value=""></div>
+<div class="fld fld-pal"><label for="cl-pal">Επίπεδο δραστηριότητας (PAL)</label><select id="cl-pal"><option value="1.2">Καθιστική · 1,2</option><option value="1.375" selected>Ελαφριά · 1,375</option><option value="1.55">Μέτρια · 1,55</option><option value="1.725">Έντονη · 1,725</option><option value="1.9">Πολύ έντονη · 1,9</option></select></div><div class="palkey" aria-label="Τι σημαίνει κάθε επίπεδο"><div class="pk" data-pk="0"><b>Καθιστική</b><span>δουλειά γραφείου, λίγη ή καθόλου άσκηση</span></div><div class="pk on" data-pk="1"><b>Ελαφριά</b><span>ελαφριά άσκηση 1 έως 3 ημέρες την εβδομάδα</span></div><div class="pk" data-pk="2"><b>Μέτρια</b><span>μέτρια άσκηση 3 έως 5 ημέρες την εβδομάδα</span></div><div class="pk" data-pk="3"><b>Έντονη</b><span>έντονη άσκηση 6 έως 7 ημέρες την εβδομάδα</span></div><div class="pk" data-pk="4"><b>Πολύ έντονη</b><span>πολύ έντονη άσκηση καθημερινά ή σωματικά απαιτητική εργασία</span></div></div>
+</div>
+<div class="res" aria-live="polite">
+<div><span class="ov">Βασικός μεταβολισμός</span><b data-r="bmr">—</b><span class="mu" style="font-size: 15px">θερμίδες / ημέρα</span></div>
+<div><span class="ov">Ημερήσιες ανάγκες</span><b data-r="tdee">—</b><span class="mu" style="font-size: 15px">θερμίδες / ημέρα</span></div>
+<div><span class="ov ov-bmi">BMI (Δείκτης Μάζας Σώματος)</span><b data-r="bmi">—</b><span class="mu" style="font-size: 15px" data-r="cat">Συμπλήρωσε ύψος και βάρος</span><span class="gauge" aria-hidden="true"><i class="off" data-gauge style="left: 0%"></i></span><span class="gl" aria-hidden="true"><span>18,5</span><span>25</span><span>30</span></span></div>
+</div>
+<p class="eqn"><span class="eqk" data-r="eqk">Εξισώσεις:</span><b data-r="method">Mifflin-St Jeor &amp; Katch-McArdle</b></p>
+<p class="mu" style="margin: 0; font-size: 15px" data-r="note">Ενδεικτική εκτίμηση για ενήλικες 18–100 ετών. Δεν υποκαθιστά ιατρική συμβουλή και δεν αντικαθιστά την εξατομικευμένη αξιολόγηση.</p>
 </form>
-<div aria-live="polite" style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<div id="calc-empty">
-<div style="flex-grow: 1; min-height: 240px; border-radius: 16px; background: #F6E7E4; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; color: #5B6475; font-size: 15px">Συμπλήρωσε ηλικία, ύψος και βάρος για να δεις τα αποτελέσματα.</div>
-</div>
-<div id="calc-invalid" hidden>
-<div style="border-radius: 16px; background: #F4F6FA; padding: 24px; color: #5B6475; font-size: 15px"><span id="calc-msg"></span></div>
-</div>
-<div id="calc-ok" hidden style="display: flex; flex-direction: column; gap: 16px">
-<div style="border-radius: 16px; background: #E7EFE9; padding: 24px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><span style="font-size: 14px; font-weight: 600; color: #5B6475">Δείκτης Μάζας Σώματος (ΔΜΣ)</span><span style="font-size: 14px; font-weight: 600; color: #082241"><span id="calc-cat"></span></span></div>
-<p style="margin: 0; font-family: 'Noto Serif', Georgia, serif; font-size: 44px; line-height: 1; color: #082241"><span id="calc-bmi"></span></p>
-<div aria-hidden="true" style="position: relative; height: 10px; border-radius: 99px; background: linear-gradient(90deg, #9BB7D4 0%, #9BB7D4 14%, #8FA89A 14%, #8FA89A 40%, #E2C17A 40%, #E2C17A 60%, #D99A7E 60%, #D99A7E 100%)">
-<span id="calc-marker" style="position: absolute; top: -5px; left: 0%; width: 4px; height: 20px; margin-left: -2px; border-radius: 2px; background: #082241; transition: left .5s cubic-bezier(.2,.7,.2,1)"></span>
-</div>
-<div aria-hidden="true" style="position: relative; height: 16px; font-size: 12px; color: #5B6475"><span style="position: absolute; left: 14%; transform: translateX(-50%)">18,5</span><span style="position: absolute; left: 40%; transform: translateX(-50%)">25</span><span style="position: absolute; left: 60%; transform: translateX(-50%)">30</span></div>
-</div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
-<div style="border-radius: 16px; background: #F5ECDD; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; font-weight: 600; color: #5B6475">Μεταβολικός ρυθμός ηρεμίας</span><span style="font-family: 'Noto Serif', Georgia, serif; font-size: 30px; color: #082241"><span id="calc-bmr"></span></span><span style="font-size: 13px; color: #5B6475">kcal / ημέρα</span></div>
-<div style="border-radius: 16px; background: #082241; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; font-weight: 600; color: #D5DAE4">Ημερήσιες ενεργειακές ανάγκες</span><span style="font-family: 'Noto Serif', Georgia, serif; font-size: 30px; color: #FFFFFF"><span id="calc-tdee"></span></span><span style="font-size: 13px; color: #D5DAE4">kcal / ημέρα</span></div>
-</div>
-<p style="margin: 0; font-size: 13px; color: #5B6475"><span id="calc-method"></span></p>
 </div>
 </div>
-</div>
-<p style="margin: 0; font-size: 13px; line-height: 1.6; color: #5B6475; border-top: 1px solid #E4E6EA; padding-top: 20px">Τα αποτελέσματα είναι εκτιμήσεις και δεν αποτελούν διάγνωση ή διατροφική σύσταση. Ο ΔΜΣ δεν ξεχωρίζει τη μυϊκή μάζα από το λίπος και δεν ισχύει για παιδιά, εφήβους και εγκύους. Ο μεταβολικός ρυθμός ηρεμίας υπολογίζεται με την εξίσωση Mifflin-St Jeor ή, αν δώσεις ποσοστό λίπους, με την εξίσωση Katch-McArdle. Για μια εξατομικευμένη εκτίμηση, κλείσε μια δωρεάν γνωριμία.</p>
 </div>
 </section>
 
+
+
+
+
+
+
 </main>
-<footer style="border-top: 1px solid #E4E6EA">
-<div style="max-width: 1120px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; color: #5B6475">
-<span>Πέτρος-Ιωάννης Τεντολούρης · Διαιτολόγος – Διατροφολόγος · © 2026</span>
-<span style="display: flex; gap: 24px"><a class="pt-link" href="mailto:petrostentolouris@gmail.com" style="text-decoration: none">petrostentolouris@gmail.com</a><a class="pt-link" href="https://www.instagram.com/tentolouris_nutrition/" rel="noopener" style="text-decoration: none">Instagram</a></span>
+
+<footer style="border-top: 1px solid rgba(24,24,24,.14)">
+<div class="wrap" style="padding-top: 72px; padding-bottom: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span class="wm"><img src="/logo-mark.webp" alt="" width="46" height="46"><span class="wt"><b>TENTOLOURIS <em>NUTRITION</em></b><span>Κλινική Διαιτολογία · Online</span></span></span>
+<span class="mu" style="font-size: 14px">Πέτρος-Ιωάννης Τεντολούρης<br>Διαιτολόγος – Διατροφολόγος, MSc</span>
 </div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+<span class="ov" style="margin-bottom: 6px">Επικοινωνία</span>
+<a href="mailto:petrostentolouris@gmail.com" style="text-decoration: none">petrostentolouris@gmail.com</a>
+<a href="https://www.instagram.com/tentolouris_nutrition/" target="_blank" rel="noopener" style="text-decoration: none">Instagram · @tentolouris_nutrition</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+<span class="ov" style="margin-bottom: 6px">Πληροφορίες</span>
+<span class="mu">Τρίκαλα · Online συνεδρίες σε όλη την Ελλάδα</span>
+<a href="/politiki-aporritou" style="text-decoration: none">Πολιτική απορρήτου &amp; cookies</a>
+</div>
+</div>
+<div class="wrap" style="padding-bottom: 40px"><p class="mu ln" style="margin: 0; padding-top: 24px; font-size: 15px">© 2026 Πέτρος-Ιωάννης Τεντολούρης</p></div>
 </footer>
+
+<a class="totop" href="#page-top" aria-label="Επιστροφή στην κορυφή"><svg class="tr" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="27" fill="none" stroke="rgba(8,34,68,.2)" stroke-width="1.5"></circle><circle cx="30" cy="30" r="27" fill="none" stroke="#082244" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="169.6" stroke-dashoffset="169.6"></circle></svg><svg class="ta" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></a>
 </div>
 
-<script type="application/json" id="calc-i18n">{"locale": "el-GR", "under": "Λιποβαρές", "normal": "Φυσιολογικό βάρος", "over": "Υπέρβαρο", "obese": "Παχυσαρκία", "errAge": "Ο υπολογιστής αφορά ενήλικες 18–100 ετών.", "errHW": "Έλεγξε το ύψος (120–230 cm) και το βάρος (30–300 kg).", "errBf": "Το ποσοστό λίπους πρέπει να είναι από 3% έως 60%, ή άφησέ το κενό.", "methodMSJ": "Υπολογισμός με την εξίσωση Mifflin-St Jeor.", "methodKM": "Υπολογισμός με την εξίσωση Katch-McArdle, με βάση το ποσοστό λίπους (άλιπη μάζα: {lbm} kg)."}</script>
-<script src="/main.js" defer></script>
 </body>
 </html>
